@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aarogya Care is a modern multispecialty hospital in Nashik offering specialist consultations, diagnostics, preventive healthcare and patient-focused medical services.">
+    <title>Aarogya Care | Multispecialty Hospital in Nashik</title>
+    
+    <!-- SEO & Canonical -->
+    <link rel="canonical" href="https://aarogyacare.in/">
+    <meta property="og:title" content="Aarogya Care | Modern Healthcare in Nashik">
+    <meta property="og:description" content="Compassionate care, advanced medicine. Book your appointment with top specialists.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts: Plus Jakarta Sans for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Phosphor Icons - clean, modern, accessible) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Aarogya Care",
+      "url": "https://aarogyacare.in",
+      "logo": "https://via.placeholder.com/200x60?text=Aarogya+Care",
+      "description": "Premium multi-specialty healthcare organization providing accessible, reliable and compassionate healthcare.",
+      "telephone": "+919876543210",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "College Road",
+        "addressLocality": "Nashik",
+        "addressRegion": "Maharashtra",
+        "postalCode": "422005",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "medicalSpecialty": ["Cardiology", "Neurology", "Orthopaedics", "Paediatrics", "Obstetrics & Gynaecology"]
+    }
+    </script>
+
+    <style>
+        /* ==========================================================================
+           1. CSS VARIABLES & THEME
+           ========================================================================== */
+        :root {
+            /* Primary Colors */
+            --clr-navy: #0F2C59;
+            --clr-navy-light: #1A407D;
+            --clr-white: #FFFFFF;
+            --clr-off-white: #F8FAFC;
+            --clr-bg-alt: #F1F5F9;
+            
+            /* Secondary Colors */
+            --clr-light-blue: #E0F2FE;
+            --clr-teal: #0D9488;
+            --clr-green: #059669;
+            --clr-green-light: #D1FAE5;
+            
+            /* Accent Colors */
+            --clr-saffron: #E85D04;
+            --clr-saffron-hover: #D05303;
+            --clr-saffron-light: #FFEDD5;
+            
+            /* Text Colors */
+            --text-main: #0F172A;
+            --text-body: #475569;
+            --text-muted: #64748B;
+            --border-clr: #E2E8F0;
+            
+            /* Typography */
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            /* Spacing & Layout */
+            --container-w: 1280px;
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-pill: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.02);
+            --shadow-floating: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1);
+            
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ==========================================================================
+           2. RESET & BASE
+           ========================================================================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--text-body);
+            background-color: var(--clr-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--text-main);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-w);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section { padding: 6rem 0; }
+        
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header .eyebrow {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--clr-saffron);
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; }
+        .section-header p { font-size: 1.125rem; max-width: 600px; margin: 0 auto; }
+
+        /* ==========================================================================
+           3. BUTTONS
+           ========================================================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background-color: var(--clr-navy);
+            color: var(--clr-white);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--clr-navy-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background-color: var(--clr-light-blue);
+            color: var(--clr-navy);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #bae6fd;
+            transform: translateY(-2px);
+        }
+        
+        .btn-accent {
+            background-color: var(--clr-saffron);
+            color: var(--clr-white);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--clr-saffron-hover);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border-clr);
+            background: transparent;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--clr-navy);
+            color: var(--clr-navy);
+        }
+
+        /* ==========================================================================
+           4. HEADER & EMERGENCY BAR
+           ========================================================================== */
+        .emergency-bar {
+            background-color: var(--clr-saffron-light);
+            color: var(--clr-saffron-hover);
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .emergency-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .emergency-bar .left { display: flex; align-items: center; gap: 0.5rem; }
+        .emergency-bar .right a { font-weight: 700; color: var(--clr-saffron-hover); }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            border-bottom: 1px solid var(--border-clr);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+            transition: var(--transition);
+        }
+
+        header.scrolled .header-inner { height: 70px; }
+
+        .brand { display: flex; flex-direction: column; }
+        .brand-name {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--clr-navy);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+        .brand-desc {
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.15rem;
+        }
+
+        nav ul { display: flex; gap: 2rem; align-items: center; }
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+        nav a:hover, nav a.active { color: var(--clr-navy); font-weight: 600; }
+
+        .header-actions { display: flex; align-items: center; gap: 1.5rem; }
+        .header-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--clr-navy);
+            font-size: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        /* ==========================================================================
+           5. HERO SECTION
+           ========================================================================== */
+        .hero {
+            padding: 4rem 0 8rem;
+            background: linear-gradient(to bottom right, var(--clr-off-white), var(--clr-white));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content .eyebrow {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--clr-teal);
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            background: var(--clr-light-blue);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-pill);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--clr-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-desc {
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-bottom: 2.5rem;
+            max-width: 540px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .trust-metrics {
+            display: flex;
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-clr);
+        }
+
+        .metric strong { display: block; color: var(--clr-navy); font-size: 1.25rem; font-family: var(--font-heading); font-weight: 700; }
+        .metric span { font-size: 0.875rem; color: var(--text-muted); }
+
+        .hero-visual { position: relative; }
+        .hero-img-wrap {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        
+        .hero-img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        .floating-card {
+            position: absolute;
+            bottom: -2rem;
+            left: -2rem;
+            background: var(--clr-white);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-floating);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 2;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-icon {
+            background: var(--clr-green-light);
+            color: var(--clr-green);
+            width: 48px; height: 48px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .floating-text h4 { font-size: 1rem; margin-bottom: 0.25rem; }
+        .floating-text p { font-size: 0.875rem; color: var(--text-muted); margin: 0; }
+
+        /* ==========================================================================
+           6. QUICK ACTIONS
+           ========================================================================== */
+        .quick-actions-wrap { margin-top: -4rem; position: relative; z-index: 10; }
+        .quick-actions {
+            background: var(--clr-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            overflow: hidden;
+            border: 1px solid var(--border-clr);
+        }
+
+        .qa-item {
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+            transition: var(--transition);
+            border-right: 1px solid var(--border-clr);
+        }
+        .qa-item:last-child { border-right: none; }
+        
+        .qa-item:hover { background: var(--clr-off-white); }
+        .qa-icon { font-size: 2rem; color: var(--clr-navy); }
+        .qa-item h3 { font-size: 1.125rem; }
+        .qa-item p { font-size: 0.875rem; margin: 0; color: var(--text-muted); }
+        .qa-link {
+            margin-top: auto;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--clr-navy);
+            display: flex; align-items: center; gap: 0.25rem;
+        }
+
+        /* ==========================================================================
+           7. INTRO / TRUST SECTION
+           ========================================================================== */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .intro-values {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .value-item { display: flex; gap: 1rem; }
+        .value-icon {
+            flex-shrink: 0; width: 48px; height: 48px;
+            background: var(--clr-light-blue);
+            color: var(--clr-navy);
+            border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+        }
+        .value-content h4 { font-size: 1.125rem; margin-bottom: 0.25rem; }
+        .value-content p { font-size: 0.95rem; margin: 0; }
+
+        .counters {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            background: var(--clr-navy);
+            color: var(--clr-white);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+        }
+        .counter-item h3 { color: var(--clr-white); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .counter-item p { color: #94a3b8; font-size: 0.875rem; margin: 0; }
+
+        /* ==========================================================================
+           8. DEPARTMENTS
+           ========================================================================== */
+        .bg-alt { background-color: var(--clr-bg-alt); }
+        
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .dept-card {
+            background: var(--clr-white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .dept-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-clr);
+            transform: translateY(-4px);
+        }
+
+        .dept-icon {
+            font-size: 2rem;
+            color: var(--clr-teal);
+            background: #CCFBF1;
+            width: 56px; height: 56px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: var(--radius-sm);
+        }
+
+        .dept-card h3 { font-size: 1.25rem; }
+        .dept-card p { font-size: 0.9rem; margin-bottom: 1rem; }
+        .dept-card a { font-weight: 600; color: var(--clr-navy); font-size: 0.875rem; margin-top: auto; display: inline-flex; align-items: center; gap: 0.25rem; }
+
+        /* ==========================================================================
+           9. DOCTORS
+           ========================================================================== */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-pill);
+            background: var(--clr-off-white);
+            border: 1px solid var(--border-clr);
+            font-weight: 500;
+            color: var(--text-body);
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--clr-navy);
+            color: var(--clr-white);
+            border-color: var(--clr-navy);
+        }
+
+        .doctors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .doc-card {
+            background: var(--clr-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-clr);
+            transition: var(--transition);
+        }
+        
+        .doc-card:hover { box-shadow: var(--shadow-md); }
+
+        .doc-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background-color: var(--clr-bg-alt);
+        }
+
+        .doc-info { padding: 1.5rem; }
+        .doc-specialty { font-size: 0.8rem; font-weight: 600; color: var(--clr-teal); text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.5rem;}
+        .doc-name { font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .doc-quals { font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem; }
+        
+        .doc-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-clr);
+            margin-bottom: 1.5rem;
+        }
+        .doc-meta span { font-size: 0.875rem; display: flex; align-items: center; gap: 0.25rem; }
+        .avail { color: var(--clr-green); font-weight: 500; }
+
+        /* ==========================================================================
+           10. APPOINTMENT FORM
+           ========================================================================== */
+        .appt-section {
+            background: var(--clr-navy);
+            color: var(--clr-white);
+        }
+        
+        .appt-section .section-header h2, .appt-section .section-header p { color: var(--clr-white); }
+        .appt-section .eyebrow { color: var(--clr-light-blue); }
+
+        .appt-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            background: var(--clr-white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+
+        .appt-info {
+            background: var(--clr-off-white);
+            padding: 3rem;
+            color: var(--text-main);
+        }
+
+        .appt-info h3 { margin-bottom: 1rem; }
+        .appt-info p { color: var(--text-body); margin-bottom: 2rem; }
+        
+        .contact-methods li {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-icon { font-size: 1.5rem; color: var(--clr-navy); }
+        .contact-text strong { display: block; font-size: 0.875rem; color: var(--text-muted); font-weight: 500; }
+        .contact-text span { font-weight: 600; color: var(--text-main); }
+
+        .appt-form-wrap { padding: 3rem; }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .form-group.full { grid-column: 1 / -1; }
+        
+        label { font-size: 0.875rem; font-weight: 500; color: var(--text-main); }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--border-clr);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--clr-white);
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--clr-navy);
+            box-shadow: 0 0 0 3px rgba(15, 44, 89, 0.1);
+        }
+
+        textarea { resize: vertical; min-height: 100px; }
+
+        .form-disclaimer { font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; display: flex; gap: 0.5rem; }
+
+        /* ==========================================================================
+           11. HEALTH PACKAGES & SERVICES
+           ========================================================================== */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .package-card {
+            border: 1px solid var(--border-clr);
+            border-radius: var(--radius-md);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            background: var(--clr-white);
+            transition: var(--transition);
+            display: flex; flex-direction: column;
+        }
+        
+        .package-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--clr-teal); }
+        
+        .package-card.popular {
+            border-color: var(--clr-navy);
+            position: relative;
+            box-shadow: var(--shadow-md);
+        }
+        .popular-badge {
+            position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: var(--clr-navy); color: var(--clr-white);
+            font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+            padding: 0.25rem 1rem; border-radius: var(--radius-pill);
+        }
+
+        .package-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .package-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+        .price { font-size: 2.5rem; font-family: var(--font-heading); font-weight: 700; color: var(--text-main); margin-bottom: 2rem; display: block;}
+        .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+        
+        .pkg-list { text-align: left; margin-bottom: 2rem; margin-top: 1rem; flex-grow: 1;}
+        .pkg-list li { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.95rem; }
+        .pkg-list i { color: var(--clr-green); margin-top: 0.25rem; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-item {
+            display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;
+            padding: 1.5rem; background: var(--clr-white); border-radius: var(--radius-md); border: 1px solid var(--border-clr);
+        }
+        .service-item i { font-size: 2rem; color: var(--clr-navy); }
+        .service-item span { font-weight: 500; }
+
+        /* ==========================================================================
+           12. FACILITIES
+           ========================================================================== */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            gap: 1.5rem;
+        }
+
+        .fac-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .fac-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .fac-item:hover img { transform: scale(1.05); }
+        
+        .fac-overlay {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(15, 23, 42, 0.8));
+            padding: 2rem 1.5rem 1.5rem;
+            color: var(--clr-white);
+        }
+        .fac-overlay h3 { color: var(--clr-white); font-size: 1.125rem; margin-bottom: 0.25rem; }
+        .fac-overlay p { font-size: 0.875rem; margin: 0; opacity: 0.9; }
+
+        /* Asymmetric Layout */
+        .fac-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+        .fac-item:nth-child(2) { grid-column: span 2; }
+        .fac-item:nth-child(3), .fac-item:nth-child(4) { grid-column: span 1; }
+
+        /* ==========================================================================
+           13. PATIENT EXPERIENCE (TIMELINE)
+           ========================================================================== */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding-top: 2rem;
+        }
+        .timeline::before {
+            content: ''; position: absolute; top: 3.5rem; left: 0; right: 0; height: 2px;
+            background: var(--border-clr); z-index: 1;
+        }
+        .timeline-step {
+            position: relative; z-index: 2; width: 22%; text-align: center;
+        }
+        .step-num {
+            width: 48px; height: 48px; background: var(--clr-white); border: 2px solid var(--clr-navy);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-heading); font-weight: 700; color: var(--clr-navy);
+            margin: 0 auto 1.5rem;
+        }
+        .timeline-step h4 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+        .timeline-step p { font-size: 0.9rem; }
+
+        /* ==========================================================================
+           14. TESTIMONIALS
+           ========================================================================== */
+        .testimonials-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+        }
+        .testimonial {
+            background: var(--clr-white); padding: 3rem; border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm); border: 1px solid var(--border-clr);
+            position: relative;
+        }
+        .quote-icon {
+            position: absolute; top: 2rem; right: 2rem; font-size: 4rem; color: var(--clr-off-white);
+            line-height: 1; z-index: 1; font-family: serif;
+        }
+        .testimonial p { font-size: 1.125rem; font-style: italic; margin-bottom: 2rem; position: relative; z-index: 2; color: var(--text-main); }
+        .author { display: flex; align-items: center; gap: 1rem; position: relative; z-index: 2;}
+        .author-info h4 { font-size: 1rem; margin-bottom: 0.1rem; }
+        .author-info span { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* ==========================================================================
+           15. ARTICLES & FAQ
+           ========================================================================== */
+        .articles-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem;
+        }
+        .article-card {
+            display: flex; flex-direction: column; gap: 1rem; transition: var(--transition);
+        }
+        .article-card:hover h3 { color: var(--clr-navy); }
+        .article-cat { font-size: 0.75rem; font-weight: 600; color: var(--clr-saffron); text-transform: uppercase; }
+        .article-card h3 { font-size: 1.125rem; }
+        .article-card a { font-size: 0.875rem; font-weight: 600; color: var(--clr-teal); margin-top: auto; }
+
+        .faq-wrap { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            border-bottom: 1px solid var(--border-clr);
+        }
+        .faq-question {
+            width: 100%; text-align: left; padding: 1.5rem 0; font-size: 1.125rem; font-weight: 600;
+            color: var(--text-main); display: flex; justify-content: space-between; align-items: center;
+        }
+        .faq-question i { transition: transform 0.3s ease; }
+        .faq-answer {
+            max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0;
+        }
+        .faq-answer-inner { padding-bottom: 1.5rem; color: var(--text-body); }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { max-height: 200px; } /* Arbitrary height for pure CSS transition */
+
+        /* ==========================================================================
+           16. ABOUT & LOCATION
+           ========================================================================== */
+        .about-section { background: var(--clr-navy); color: var(--clr-white); }
+        .about-section .section-header h2, .about-section .section-header p { color: var(--clr-white); }
+        .about-values { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 3rem; }
+        .about-val { text-align: center; }
+        .about-val i { font-size: 2rem; color: var(--clr-light-blue); margin-bottom: 0.5rem; display: block; }
+        
+        .location-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+        }
+        .contact-details { display: grid; gap: 2rem; }
+        .loc-item h4 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+        .map-placeholder {
+            width: 100%; height: 400px; background: #e2e8f0; border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center; flex-direction: column; color: var(--text-muted);
+        }
+
+        /* ==========================================================================
+           17. FOOTER
+           ========================================================================== */
+        footer { background: #081935; color: #cbd5e1; padding: 5rem 0 2rem; }
+        .footer-grid {
+            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem;
+        }
+        .footer-brand h2 { color: var(--clr-white); font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .footer-brand p { font-size: 0.875rem; margin-bottom: 2rem; opacity: 0.8; }
+        .social-icons { display: flex; gap: 1rem; }
+        .social-icons a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--clr-white); }
+        .social-icons a:hover { background: var(--clr-saffron); }
+        
+        .footer-col h4 { color: var(--clr-white); font-size: 1rem; margin-bottom: 1.5rem; }
+        .footer-col ul { display: grid; gap: 0.75rem; }
+        .footer-col a { font-size: 0.875rem; }
+        .footer-col a:hover { color: var(--clr-white); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+            font-size: 0.8rem;
+        }
+        .disclaimer { font-size: 0.7rem; opacity: 0.6; text-align: center; margin-top: 1rem; width: 100%; }
+
+        /* ==========================================================================
+           18. MODALS & FIXED MOBILE UI
+           ========================================================================== */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(4px);
+            z-index: 2000; display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        
+        .modal-content {
+            background: var(--clr-white); padding: 3rem; border-radius: var(--radius-md);
+            max-width: 450px; width: 90%; text-align: center; transform: scale(0.95); transition: var(--transition);
+            position: relative;
+        }
+        .modal-overlay.active .modal-content { transform: scale(1); }
+        
+        .modal-icon {
+            width: 64px; height: 64px; background: var(--clr-green-light); color: var(--clr-green);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin: 0 auto 1.5rem;
+        }
+        .modal-content h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .modal-content p { color: var(--text-muted); margin-bottom: 2rem; }
+        .close-modal { position: absolute; top: 1rem; right: 1rem; font-size: 1.5rem; color: var(--text-muted); }
+
+        .mobile-action-bar {
+            display: none; position: fixed; bottom: 0; left: 0; width: 100%;
+            background: var(--clr-white); box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+            z-index: 1000; padding: 0.75rem 1rem; border-top: 1px solid var(--border-clr);
+        }
+        
+        /* Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            * { animation: none !important; transition: none !important; }
+        }
+
+        /* ==========================================================================
+           19. RESPONSIVE DESIGN (Media Queries)
+           ========================================================================== */
+        @media (max-width: 1024px) {
+            .hero-grid, .intro-grid, .appt-grid, .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-content { text-align: center; }
+            .hero-desc { margin-left: auto; margin-right: auto; }
+            .hero-actions { justify-content: center; }
+            .trust-metrics { justify-content: center; }
+            .floating-card { bottom: -1rem; left: 50%; transform: translateX(-50%); animation: none; width: 90%; }
+            .packages-grid { grid-template-columns: 1fr 1fr; }
+            .facilities-grid { grid-template-columns: 1fr 1fr; }
+            .fac-item:nth-child(1), .fac-item:nth-child(2) { grid-column: span 2; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 4rem 0; }
+            .emergency-bar .container { flex-direction: column; text-align: center; gap: 0.25rem; }
+            
+            nav ul, .header-phone { display: none; }
+            .mobile-menu-btn { display: block; }
+            
+            .quick-actions { grid-template-columns: 1fr 1fr; border-radius: var(--radius-md); }
+            .qa-item:nth-child(2) { border-right: none; }
+            .qa-item { padding: 1.5rem 1rem; }
+            
+            .counters { padding: 2rem; gap: 1rem; }
+            
+            .timeline { flex-direction: column; padding-top: 0; gap: 2rem; }
+            .timeline::before { top: 0; bottom: 0; left: 24px; width: 2px; height: auto; }
+            .timeline-step { width: 100%; display: flex; align-items: flex-start; text-align: left; gap: 1.5rem; }
+            .step-num { margin: 0; flex-shrink: 0; }
+            
+            .testimonials-grid, .packages-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            
+            .appt-grid { display: flex; flex-direction: column-reverse; }
+            
+            .mobile-action-bar { display: flex; gap: 1rem; }
+            .mobile-action-bar .btn { flex: 1; padding: 0.75rem; font-size: 0.9rem; }
+            .btn-emergency { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+            
+            body { padding-bottom: 70px; /* Space for action bar */ }
+        }
+
+        @media (max-width: 480px) {
+            .quick-actions { grid-template-columns: 1fr; }
+            .qa-item { border-right: none; border-bottom: 1px solid var(--border-clr); }
+            .qa-item:last-child { border-bottom: none; }
+            .hero-title { font-size: 2.25rem; }
+            .floating-card { flex-direction: column; text-align: center; padding: 1rem; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .facilities-grid { grid-template-columns: 1fr; }
+            .fac-item:nth-child(1), .fac-item:nth-child(2), .fac-item:nth-child(3), .fac-item:nth-child(4) { grid-column: span 1; grid-row: span 1; }
+        }
+
+        /* Mobile Nav Override */
+        nav.mobile-active {
+            position: absolute; top: 100%; left: 0; width: 100%;
+            background: var(--clr-white); box-shadow: var(--shadow-md);
+            border-top: 1px solid var(--border-clr); padding: 1rem 0;
+        }
+        nav.mobile-active ul {
+            display: flex; flex-direction: column; align-items: flex-start;
+            padding: 0 1.5rem; gap: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Emergency Bar -->
+    <div id="emergency-bar" class="emergency-bar">
+        <div class="container">
+            <div class="left">
+                <i class="ph-fill ph-warning-circle"></i>
+                <span>24/7 EMERGENCY CARE: Immediate medical assistance when you need it.</span>
+            </div>
+            <div class="right">
+                <a href="tel:+919876543210"><i class="ph ph-phone"></i> +91 98765 43210</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#" class="brand">
+                <span class="brand-name">AAROGYA CARE</span>
+                <span class="brand-desc">Multispecialty Hospital</span>
+            </a>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+919876543210" class="header-phone">
+                    <i class="ph-fill ph-phone-call"></i>
+                    <span>+91 98765 43210</span>
+                </a>
+                <a href="#appointment" class="btn btn-primary d-none-mobile">Book an Appointment</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">Compassionate Care. Advanced Medicine.</span>
+                    <h1 class="hero-title">Healthcare that puts you first.</h1>
+                    <p class="hero-desc">From preventive care to advanced treatment, our experienced doctors and modern facilities are here to support every step of your healthcare journey.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#appointment" class="btn btn-primary">Book Appointment</a>
+                        <a href="#doctors" class="btn btn-outline">Find a Doctor</a>
+                    </div>
+
+                    <div class="trust-metrics">
+                        <div class="metric">
+                            <strong>50+</strong>
+                            <span>Specialists</span>
+                        </div>
+                        <div class="metric">
+                            <strong>25+</strong>
+                            <span>Departments</span>
+                        </div>
+                        <div class="metric">
+                            <strong>24/7</strong>
+                            <span>Emergency Care</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-img-wrap">
+                        <!-- High quality Unsplash image representing modern healthcare/consultation -->
+                        <img src="https://plus.unsplash.com/premium_photo-1682089872205-dbbae3e4ba32?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Compassionate female doctor consulting a patient" class="hero-img" loading="lazy">
+                    </div>
+                    <div class="floating-card">
+                        <div class="floating-icon">
+                            <i class="ph-fill ph-heartbeat"></i>
+                        </div>
+                        <div class="floating-text">
+                            <h4>Patient-first care</h4>
+                            <p>Experienced specialists · Modern facilities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <div class="container quick-actions-wrap reveal">
+            <div class="quick-actions">
+                <a href="#appointment" class="qa-item">
+                    <i class="ph ph-calendar-plus qa-icon"></i>
+                    <div>
+                        <h3>Book Appointment</h3>
+                        <p>Schedule a consultation with our specialists.</p>
+                    </div>
+                    <span class="qa-link">Book Now <i class="ph ph-arrow-right"></i></span>
+                </a>
+                <a href="#doctors" class="qa-item">
+                    <i class="ph ph-stethoscope qa-icon"></i>
+                    <div>
+                        <h3>Find a Doctor</h3>
+                        <p>Explore doctors by specialty and experience.</p>
+                    </div>
+                    <span class="qa-link">Search Doctors <i class="ph ph-arrow-right"></i></span>
+                </a>
+                <a href="#departments" class="qa-item">
+                    <i class="ph ph-squares-four qa-icon"></i>
+                    <div>
+                        <h3>Our Departments</h3>
+                        <p>Find the right department for your needs.</p>
+                    </div>
+                    <span class="qa-link">View Departments <i class="ph ph-arrow-right"></i></span>
+                </a>
+                <a href="tel:+919876543210" class="qa-item">
+                    <i class="ph ph-ambulance qa-icon"></i>
+                    <div>
+                        <h3>Emergency Care</h3>
+                        <p>Get immediate medical assistance 24/7.</p>
+                    </div>
+                    <span class="qa-link">Call Now <i class="ph ph-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Trust / Intro Section -->
+        <section id="about" class="reveal">
+            <div class="container intro-grid">
+                <div>
+                    <span class="eyebrow" style="color: var(--clr-saffron);">Why Aarogya Care</span>
+                    <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 1.5rem; color: var(--clr-navy);">Modern medicine, delivered with human care.</h2>
+                    <p style="font-size: 1.125rem; margin-bottom: 2rem;">Aarogya Care brings together experienced specialists, modern diagnostic facilities and a patient-first approach to provide comprehensive healthcare for individuals and families in Nashik.</p>
+                    
+                    <div class="intro-values">
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ph ph-certificate"></i></div>
+                            <div class="value-content">
+                                <h4>Expertise</h4>
+                                <p>Experienced specialists across multiple medical disciplines.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ph ph-microscope"></i></div>
+                            <div class="value-content">
+                                <h4>Technology</h4>
+                                <p>Modern diagnostic and treatment facilities under one roof.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon"><i class="ph ph-hands-clapping"></i></div>
+                            <div class="value-content">
+                                <h4>Compassion</h4>
+                                <p>Care designed around the patient, not just the condition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="counters">
+                    <div class="counter-item">
+                        <h3 data-count="15">0</h3>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <div class="counter-item">
+                        <h3 data-count="50">0</h3>
+                        <p>Specialists</p>
+                    </div>
+                    <div class="counter-item">
+                        <h3 data-count="100">0</h3>
+                        <p>K+ Patients Cared For</p>
+                    </div>
+                    <div class="counter-item">
+                        <h3 data-count="25">0</h3>
+                        <p>Specialties</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Departments Section -->
+        <section id="departments" class="bg-alt reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Find the care you need</h2>
+                    <p>Comprehensive medical care across leading specialties.</p>
+                </div>
+                
+                <div class="dept-grid">
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-heartbeat"></i></div>
+                        <h3>Cardiology</h3>
+                        <p>Advanced heart and cardiovascular care.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-brain"></i></div>
+                        <h3>Neurology</h3>
+                        <p>Diagnosis and treatment of neurological conditions.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-bone"></i></div>
+                        <h3>Orthopaedics</h3>
+                        <p>Comprehensive bone, joint and musculoskeletal care.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-baby"></i></div>
+                        <h3>Obstetrics & Gynae</h3>
+                        <p>Women's health, maternity and reproductive care.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-smiley"></i></div>
+                        <h3>Paediatrics</h3>
+                        <p>Dedicated healthcare for infants, children and adolescents.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-bandaids"></i></div>
+                        <h3>Dermatology</h3>
+                        <p>Comprehensive skin, hair and cosmetic dermatology.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-pill"></i></div>
+                        <h3>General Medicine</h3>
+                        <p>Diagnosis, prevention and management of common conditions.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                    <div class="dept-card">
+                        <div class="dept-icon"><i class="ph ph-eye"></i></div>
+                        <h3>Ophthalmology</h3>
+                        <p>Comprehensive eye care and vision correction.</p>
+                        <a href="#">Learn More <i class="ph ph-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <button class="btn btn-outline">View All 25+ Departments <i class="ph ph-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section id="doctors" class="reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet our specialists</h2>
+                    <p>Experienced doctors, focused on your care.</p>
+                </div>
+
+                <div class="filter-bar" id="doctor-filters">
+                    <button class="filter-btn active" data-filter="all">All Specialties</button>
+                    <button class="filter-btn" data-filter="Cardiology">Cardiology</button>
+                    <button class="filter-btn" data-filter="Orthopaedics">Orthopaedics</button>
+                    <button class="filter-btn" data-filter="Paediatrics">Paediatrics</button>
+                    <button class="filter-btn" data-filter="Gynaecology">Gynaecology</button>
+                </div>
+
+                <div class="doctors-grid" id="doctors-container">
+                    <!-- Doctors will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Section -->
+        <section id="appointment" class="appt-section reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="eyebrow">Quick & Easy</span>
+                    <h2>Book your appointment</h2>
+                    <p>Choose a specialist, select a convenient time and take the next step toward better care.</p>
+                </div>
+
+                <div class="appt-grid">
+                    <div class="appt-form-wrap">
+                        <form id="appointment-form">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name *</label>
+                                    <input type="text" id="fullName" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile">Mobile Number *</label>
+                                    <input type="tel" id="mobile" required placeholder="+91 98765 43210" pattern="[0-9\-\+\s]+">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" placeholder="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="age">Age</label>
+                                    <input type="number" id="age" min="0" max="120" placeholder="Years">
+                                </div>
+                                <div class="form-group">
+                                    <label for="department">Department *</label>
+                                    <select id="department" required>
+                                        <option value="">Select Department</option>
+                                        <option value="Cardiology">Cardiology</option>
+                                        <option value="Orthopaedics">Orthopaedics</option>
+                                        <option value="Paediatrics">Paediatrics</option>
+                                        <option value="Gynaecology">Obstetrics & Gynaecology</option>
+                                        <option value="General">General Medicine</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Preferred Date *</label>
+                                    <input type="date" id="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="visitType">Visit Type *</label>
+                                    <select id="visitType" required>
+                                        <option value="in-person">In-person Consultation</option>
+                                        <option value="video">Video Consultation</option>
+                                    </select>
+                                </div>
+                                <div class="form-group full">
+                                    <label for="message">Reason for visit / Message</label>
+                                    <textarea id="message" placeholder="Please briefly describe your symptoms or reason for visit..."></textarea>
+                                </div>
+                                <div class="form-group full" style="margin-top: 1rem;">
+                                    <button type="submit" class="btn btn-accent" style="width: 100%;">Request Appointment</button>
+                                    <div class="form-disclaimer">
+                                        <i class="ph ph-lock-key"></i>
+                                        <span>Your information is handled with care. This demo form does not transmit medical information to a real healthcare provider.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="appt-info">
+                        <h3>Need help booking?</h3>
+                        <p>If you're unsure which specialist to see or need immediate assistance, our care team is ready to help you.</p>
+                        
+                        <ul class="contact-methods">
+                            <li>
+                                <div class="contact-icon"><i class="ph-fill ph-phone"></i></div>
+                                <div class="contact-text">
+                                    <strong>Call Us (24/7)</strong>
+                                    <span>+91 98765 43210</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon"><i class="ph-fill ph-envelope-simple"></i></div>
+                                <div class="contact-text">
+                                    <strong>Email Us</strong>
+                                    <span>care@aarogyacare.in</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-icon"><i class="ph-fill ph-map-pin"></i></div>
+                                <div class="contact-text">
+                                    <strong>Visit Us</strong>
+                                    <span>College Road, Nashik, Maharashtra 422005</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Complete care, under one roof</h2>
+                    <p>We provide a comprehensive range of diagnostic and therapeutic services.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="ph ph-activity"></i>
+                        <span>Preventive Health</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="ph ph-scan"></i>
+                        <span>Diagnostic Imaging</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="ph ph-test-tube"></i>
+                        <span>Laboratory Services</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="ph ph-prescription"></i>
+                        <span>24/7 Pharmacy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="ph ph-person-arms-spread"></i>
+                        <span>Physiotherapy</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="ph ph-ambulance"></i>
+                        <span>Emergency Care</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="ph ph-video-camera"></i>
+                        <span>Telemedicine</span>
+                    </div>
+                    <div class="service-item">
+                        <i class="ph ph-bed"></i>
+                        <span>Day Care Procedures</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Checkups -->
+        <section class="bg-alt reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Prevention is part of good healthcare.</h2>
+                    <p>Regular health assessments can help identify potential health concerns early and support informed decisions about your wellbeing.</p>
+                </div>
+
+                <div class="packages-grid">
+                    <div class="package-card">
+                        <h3>Essential Health Check</h3>
+                        <p>Basic preventive screening for individuals below 30.</p>
+                        <span class="price">₹1,999 <span>/ package</span></span>
+                        <ul class="pkg-list">
+                            <li><i class="ph-bold ph-check"></i> Complete Blood Count (CBC)</li>
+                            <li><i class="ph-bold ph-check"></i> Random Blood Sugar</li>
+                            <li><i class="ph-bold ph-check"></i> Cholesterol Screening</li>
+                            <li><i class="ph-bold ph-check"></i> Physician Consultation</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%;">View Details</button>
+                    </div>
+                    
+                    <div class="package-card popular">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Comprehensive Check</h3>
+                        <p>Expanded diagnostic assessment for ages 30-50.</p>
+                        <span class="price">₹3,999 <span>/ package</span></span>
+                        <ul class="pkg-list">
+                            <li><i class="ph-bold ph-check"></i> All Essential Tests</li>
+                            <li><i class="ph-bold ph-check"></i> Liver & Kidney Function</li>
+                            <li><i class="ph-bold ph-check"></i> Thyroid Profile</li>
+                            <li><i class="ph-bold ph-check"></i> ECG & X-Ray Chest</li>
+                            <li><i class="ph-bold ph-check"></i> Dietician Consultation</li>
+                        </ul>
+                        <button class="btn btn-primary" style="width: 100%;">Book Package</button>
+                    </div>
+
+                    <div class="package-card">
+                        <h3>Executive Health Check</h3>
+                        <p>Comprehensive screening with specialist consultations.</p>
+                        <span class="price">₹6,999 <span>/ package</span></span>
+                        <ul class="pkg-list">
+                            <li><i class="ph-bold ph-check"></i> All Comprehensive Tests</li>
+                            <li><i class="ph-bold ph-check"></i> 2D Echo / TMT</li>
+                            <li><i class="ph-bold ph-check"></i> Ultrasound Abdomen</li>
+                            <li><i class="ph-bold ph-check"></i> Vitamin B12 & D3</li>
+                            <li><i class="ph-bold ph-check"></i> Cardiology Consultation</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%;">View Details</button>
+                    </div>
+                </div>
+                <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 2rem;">* Package details and pricing shown are illustrative demo content and should be confirmed with the hospital.</p>
+            </div>
+        </section>
+
+        <!-- Facilities -->
+        <section class="reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Designed around better care</h2>
+                    <p>Our infrastructure combines comfort with advanced medical technology.</p>
+                </div>
+                
+                <div class="facilities-grid">
+                    <div class="fac-item">
+                        <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern hospital corridor" loading="lazy">
+                        <div class="fac-overlay">
+                            <h3>Modern Patient Rooms</h3>
+                            <p>Comfortable spaces designed for recovery.</p>
+                        </div>
+                    </div>
+                    <div class="fac-item">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Advanced diagnostic equipment" loading="lazy">
+                        <div class="fac-overlay">
+                            <h3>Advanced Diagnostics</h3>
+                            <p>Modern imaging and laboratory facilities.</p>
+                        </div>
+                    </div>
+                    <div class="fac-item">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Operation Theatre" loading="lazy">
+                        <div class="fac-overlay">
+                            <h3>Modular OTs</h3>
+                            <p>Contemporary surgical infrastructure.</p>
+                        </div>
+                    </div>
+                    <div class="fac-item">
+                        <img src="https://images.unsplash.com/photo-1513224502586-d1e602410265?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Digital Health Records" loading="lazy">
+                        <div class="fac-overlay">
+                            <h3>Digital Records</h3>
+                            <p>Streamlined access to info.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patient Experience Timeline -->
+        <section class="bg-alt reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>From your first visit to recovery</h2>
+                    <p>We've designed a seamless healthcare journey to ensure you focus only on getting better.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="step-num">01</div>
+                        <h4>Book</h4>
+                        <p>Schedule an appointment with the right specialist online or via phone.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">02</div>
+                        <h4>Consult</h4>
+                        <p>Meet your doctor and discuss your concerns in a comfortable environment.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">03</div>
+                        <h4>Diagnose</h4>
+                        <p>Access appropriate diagnostic services under one roof when required.</p>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-num">04</div>
+                        <h4>Recover</h4>
+                        <p>Continue your care with follow-ups, therapy, and continuous support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What our patients say</h2>
+                    <p>Real stories from our fictional demo patients.</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <span class="quote-icon">"</span>
+                        <p>The doctors took the time to explain everything clearly. I never felt rushed, and the treatment plan was very well structured. Highly recommend Aarogya Care.</p>
+                        <div class="author">
+                            <div style="width:40px; height:40px; border-radius:50%; background:var(--clr-light-blue); display:flex; align-items:center; justify-content:center; color:var(--clr-navy); font-weight:bold;">PS</div>
+                            <div class="author-info">
+                                <h4>Priya S.</h4>
+                                <span>Nashik, Maharashtra</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <span class="quote-icon">"</span>
+                        <p>From reception to consultation, the entire experience felt organized and reassuring. The facilities are modern and exceptionally clean.</p>
+                        <div class="author">
+                            <div style="width:40px; height:40px; border-radius:50%; background:var(--clr-light-blue); display:flex; align-items:center; justify-content:center; color:var(--clr-navy); font-weight:bold;">AK</div>
+                            <div class="author-info">
+                                <h4>Amit K.</h4>
+                                <span>Maharashtra</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Articles -->
+        <section class="bg-alt reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Health, explained simply</h2>
+                    <p>Educational resources to help you make informed health decisions.</p>
+                </div>
+
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Heart health" style="border-radius: var(--radius-sm); height: 160px; object-fit: cover;" loading="lazy">
+                        <span class="article-cat">Cardiology</span>
+                        <h3>When should you get a heart health check?</h3>
+                        <a href="#">Read Article &rarr;</a>
+                    </article>
+                    <article class="article-card">
+                        <img src="https://images.unsplash.com/photo-1707129785947-ddc627a8bab9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vitamins" style="border-radius: var(--radius-sm); height: 160px; object-fit: cover;" loading="lazy">
+                        <span class="article-cat">Nutrition</span>
+                        <h3>Understanding common vitamin deficiencies</h3>
+                        <a href="#">Read Article &rarr;</a>
+                    </article>
+                    <article class="article-card">
+                        <img src="https://images.unsplash.com/photo-1758691461990-03b49d969495?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Consultation" style="border-radius: var(--radius-sm); height: 160px; object-fit: cover;" loading="lazy">
+                        <span class="article-cat">Patient Guide</span>
+                        <h3>How to prepare for your first specialist consultation</h3>
+                        <a href="#">Read Article &rarr;</a>
+                    </article>
+                    <article class="article-card">
+                        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Checkups" style="border-radius: var(--radius-sm); height: 160px; object-fit: cover;" loading="lazy">
+                        <span class="article-cat">Prevention</span>
+                        <h3>Why regular health checkups matter at any age</h3>
+                        <a href="#">Read Article &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about our services and policies.</p>
+                </div>
+                
+                <div class="faq-wrap">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How do I book an appointment?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                You can easily book an appointment by filling out the online form on our website, calling our dedicated helpline at +91 98765 43210, or visiting the hospital reception in person.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do I need a referral to see a specialist?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                No, you do not need a mandatory referral. However, bringing previous medical records and your primary care doctor's notes can help our specialists understand your medical history better.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Is emergency care available 24/7?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Yes, our emergency department is fully equipped and staffed round the clock, 365 days a year to handle all medical and trauma emergencies.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I book a video consultation?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Yes, we offer telemedicine services. When booking an appointment, simply select "Video Consultation" under the Visit Type option.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What should I bring for my first appointment?
+                            <i class="ph ph-caret-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Please bring a valid photo ID, any previous medical records, past prescriptions, imaging reports (X-rays, MRI), and a list of medications you are currently taking.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="contact" class="bg-alt reveal">
+            <div class="container location-grid">
+                <div>
+                    <span class="eyebrow">Contact & Location</span>
+                    <h2 style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 2rem;">We're here when you need us.</h2>
+                    
+                    <div class="contact-details">
+                        <div class="loc-item">
+                            <h4>Address</h4>
+                            <p>Aarogya Care<br>College Road, Nashik<br>Maharashtra 422005, India</p>
+                        </div>
+                        <div class="loc-item">
+                            <h4>Contact Numbers</h4>
+                            <p>Emergency: <strong>+91 98765 43210</strong> (24/7)<br>OPD/Enquiries: +91 98765 43210</p>
+                        </div>
+                        <div class="loc-item">
+                            <h4>Working Hours</h4>
+                            <p>Emergency: 24/7<br>OPD: Monday – Saturday, 9:00 AM – 8:00 PM</p>
+                        </div>
+                        <a href="#" class="btn btn-outline" style="align-self: start;">Get Directions <i class="ph ph-map-pin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map-placeholder">
+                    <i class="ph ph-map-trifold" style="font-size: 3rem; margin-bottom: 1rem; color: var(--clr-navy);"></i>
+                    <p>Map Placeholder</p>
+                    <span style="font-size: 0.8rem;">(Replace with Google Maps iframe)</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>AAROGYA CARE</h2>
+                    <p>Better care. Closer to home.<br>Modern multispecialty hospital in Nashik.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Patient Care</h4>
+                    <ul>
+                        <li><a href="#appointment">Book Appointment</a></li>
+                        <li><a href="#doctors">Find a Doctor</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                        <li><a href="#">Health Packages</a></li>
+                        <li><a href="#">Patient Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Hospital</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Facilities</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Health Articles</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aarogya Care. Demo website.</p>
+                <p>Nashik, Maharashtra, India | +91 98765 43210</p>
+                <div class="disclaimer">
+                    This website is a fictional demonstration. It does not provide medical diagnosis, treatment or emergency medical advice. In an actual emergency, contact your local emergency services or the appropriate healthcare provider.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Action Bar -->
+    <div class="mobile-action-bar d-none-desktop">
+        <a href="tel:+919876543210" class="btn btn-emergency"><i class="ph-fill ph-phone"></i> Emergency</a>
+        <a href="#appointment" class="btn btn-primary"><i class="ph ph-calendar-plus"></i> Book</a>
+    </div>
+
+    <!-- Appointment Success Modal -->
+    <div class="modal-overlay" id="success-modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Close modal">&times;</button>
+            <div class="modal-icon">
+                <i class="ph-bold ph-check"></i>
+            </div>
+            <h3>Appointment Request Received</h3>
+            <p id="modal-msg">Thank you. Our team will contact you shortly to confirm your appointment details.</p>
+            <button class="btn btn-primary close-modal-btn" style="width: 100%;">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Mobile Menu Toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.getElementById('nav-menu');
+            
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('mobile-active');
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('#nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('mobile-active');
+                });
+            });
+
+            // 2. Sticky Header Scroll Effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Scroll Reveal Animation
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 4. Number Counters Animation
+            const counters = document.querySelectorAll('.counter-item h3');
+            let hasCounted = false;
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                if(entries[0].isIntersecting && !hasCounted) {
+                    hasCounted = true;
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-count');
+                        const duration = 2000; // ms
+                        const increment = target / (duration / 16); // 60fps
+                        
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.innerText = Math.ceil(current) + (target === 100 ? 'K+' : '+');
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.innerText = target + (target === 100 ? 'K+' : '+');
+                            }
+                        };
+                        updateCounter();
+                    });
+                }
+            });
+            
+            const counterSection = document.querySelector('.counters');
+            if(counterSection) {
+                counterObserver.observe(counterSection);
+            }
+
+            // 5. Doctors Data & Filtering
+            const doctors = [
+                {
+                    name: "Dr. Rohan Deshmukh",
+                    specialty: "Cardiology",
+                    title: "Senior Consultant",
+                    quals: "MBBS, MD, DM",
+                    exp: "12+ years exp",
+                    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    name: "Dr. Ananya Kulkarni",
+                    specialty: "Gynaecology",
+                    title: "Consultant",
+                    quals: "MBBS, MD",
+                    exp: "10+ years exp",
+                    img: "https://plus.unsplash.com/premium_photo-1682089872205-dbbae3e4ba32?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                },
+                {
+                    name: "Dr. Vikram Patil",
+                    specialty: "Orthopaedics",
+                    title: "Consultant",
+                    quals: "MBBS, MS",
+                    exp: "15+ years exp",
+                    img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                },
+                {
+                    name: "Dr. Meera Joshi",
+                    specialty: "Paediatrics",
+                    title: "Consultant",
+                    quals: "MBBS, MD",
+                    exp: "9+ years exp",
+                    img: "https://images.unsplash.com/photo-1659353888906-adb3e0041693?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                }
+            ];
+
+            const docContainer = document.getElementById('doctors-container');
+            const docFilters = document.querySelectorAll('.filter-btn');
+
+            const renderDoctors = (filterStr) => {
+                docContainer.innerHTML = '';
+                const filtered = filterStr === 'all' 
+                    ? doctors 
+                    : doctors.filter(doc => doc.specialty === filterStr);
+                
+                filtered.forEach(doc => {
+                    const docEl = document.createElement('div');
+                    docEl.className = 'doc-card';
+                    docEl.innerHTML = `
+                        <img src="${doc.img}" alt="${doc.name}" class="doc-img" loading="lazy">
+                        <div class="doc-info">
+                            <span class="doc-specialty">${doc.specialty}</span>
+                            <h3 class="doc-name">${doc.name}</h3>
+                            <p class="doc-quals">${doc.title} — ${doc.quals}</p>
+                            <div class="doc-meta">
+                                <span><i class="ph ph-briefcase"></i> ${doc.exp}</span>
+                                <span class="avail"><i class="ph ph-check-circle"></i> Available Today</span>
+                            </div>
+                            <button class="btn btn-outline book-doc-btn" style="width:100%;" onclick="window.location.href='#appointment'">Book Appointment</button>
+                        </div>
+                    `;
+                    docContainer.appendChild(docEl);
+                });
+            };
+
+            // Init doctors
+            renderDoctors('all');
+
+            // Filter logic
+            docFilters.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    docFilters.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    renderDoctors(e.target.getAttribute('data-filter'));
+                });
+            });
+
+            // 6. Appointment Form Validation & Modal
+            const form = document.getElementById('appointment-form');
+            const modal = document.getElementById('success-modal');
+            const closeBtns = document.querySelectorAll('.close-modal, .close-modal-btn');
+            const modalMsg = document.getElementById('modal-msg');
+            const nameInput = document.getElementById('fullName');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Basic HTML5 validation handles empty fields. Here we just show the modal.
+                const name = nameInput.value;
+                modalMsg.innerText = `Thank you, ${name}. Our team will contact you to confirm your appointment.`;
+                modal.classList.add('active');
+                form.reset();
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('active');
+            };
+
+            closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+            
+            // Close modal on escape key
+            document.addEventListener('keydown', (e) => {
+                if(e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+
+            // Close on overlay click
+            modal.addEventListener('click', (e) => {
+                if(e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // 7. FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const btn = item.querySelector('.faq-question');
+                btn.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    // Close all others
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    if(!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // CSS media queries handle hiding/showing desktop vs mobile specific UI classes
+            const mobileStyles = document.createElement('style');
+            mobileStyles.innerHTML = `
+                @media (min-width: 769px) {
+                    .d-none-desktop { display: none !important; }
+                }
+                @media (max-width: 768px) {
+                    .d-none-mobile { display: none !important; }
+                }
+            `;
+            document.head.appendChild(mobileStyles);
+        });
+    </script>
+</body>
+</html>
