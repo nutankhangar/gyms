@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav Photo Studio Warora | Luxury Indian Wedding Photography</title>
+    <meta name="description" content="Vaibhav Photo Studio Warora — premium cinematic wedding and portrait photography in Warora, Maharashtra. Capturing meaningful moments with luxury art direction.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Royal Cinematic Color Palette */
+            --black: #0B0908;
+            --charcoal: #12100E;
+            --brown: #211914;
+            --gold: #C6A15B;
+            --gold-light: #E1C98A;
+            --ivory: #F5F0E7;
+            --muted: #A69B8D;
+            --line: rgba(198, 161, 91, 0.25);
+            
+            /* Typography */
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Manrope', sans-serif;
+            
+            /* Transitions */
+            --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-med: 0.4s ease;
+            --transition-fast: 0.2s ease;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background-color: var(--charcoal);
+            color: var(--ivory);
+            font-family: var(--font-body);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 16px; }
+        }
+
+        .section { padding: 120px 0; }
+        @media (max-width: 768px) {
+            .section { padding: 80px 0; }
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        h1 { font-size: clamp(3.5rem, 8vw, 7rem); letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; }
+        h3 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+        
+        p {
+            color: var(--muted);
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+            font-weight: 300;
+            max-width: 60ch;
+            margin-bottom: 1.5rem;
+        }
+
+        .label-gold {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .label-gold::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 1px;
+            background-color: var(--gold);
+            margin-right: 12px;
+        }
+
+        a { color: inherit; text-decoration: none; transition: color var(--transition-med); }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-med);
+            border: 1px solid transparent;
+        }
+
+        .btn-gold {
+            background-color: transparent;
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+        .btn-gold:hover {
+            background-color: var(--gold);
+            color: var(--black);
+        }
+
+        .btn-ivory {
+            background-color: transparent;
+            color: var(--ivory);
+            border-color: var(--line);
+        }
+        .btn-ivory:hover {
+            border-color: var(--ivory);
+            color: var(--ivory);
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+        }
+        .preloader-brand {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        .header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            z-index: 1000;
+            padding: 24px 0;
+            transition: all var(--transition-med);
+            border-bottom: 1px solid transparent;
+        }
+        .header.scrolled {
+            background-color: rgba(11, 9, 8, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            color: var(--ivory);
+            letter-spacing: 0.1em;
+            z-index: 1001;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-link {
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--ivory);
+        }
+        .nav-link:hover { color: var(--gold); }
+
+        .nav-right { display: flex; align-items: center; z-index: 1001; }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+        .hamburger span {
+            display: block; width: 100%; height: 1px;
+            background-color: var(--ivory);
+            position: absolute; left: 0;
+            transition: all 0.3s ease;
+        }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .hamburger span:nth-child(3) { bottom: 0; }
+
+        .hamburger.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); background-color: var(--gold); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); background-color: var(--gold); }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+                background-color: var(--black);
+                flex-direction: column; justify-content: center; align-items: center; gap: 2.5rem;
+                opacity: 0; visibility: hidden; transition: all var(--transition-med);
+                z-index: 1000;
+            }
+            .nav-links.active { opacity: 1; visibility: visible; }
+            .nav-links .nav-link {
+                font-family: var(--font-heading);
+                font-size: 2rem; text-transform: none; letter-spacing: 0.05em;
+            }
+            .desktop-cta { display: none !important; }
+            .hamburger { display: block; margin-left: 1rem; }
+        }
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(11, 9, 8, 0.95) 0%, rgba(11, 9, 8, 0.4) 100%);
+            z-index: 2;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            padding-top: 80px; /* Offset for header */
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+        .hero h1 { color: var(--ivory); margin-bottom: 1.5rem; line-height: 1; }
+        .hero p { color: rgba(245, 240, 231, 0.9); font-size: clamp(1.125rem, 2vw, 1.25rem); max-width: 50ch; margin-bottom: 2.5rem; }
+        
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .hero-bottom-bar {
+            position: absolute;
+            bottom: 40px; left: 0; width: 100%;
+            z-index: 3;
+        }
+        .hero-bottom-flex {
+            display: flex; justify-content: space-between; align-items: flex-end;
+            border-top: 1px solid var(--line);
+            padding-top: 1rem;
+        }
+        .meta-text {
+            font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.2em;
+            color: var(--muted); display: flex; flex-direction: column; gap: 4px;
+        }
+
+        .intro-section { max-width: 900px; }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        @media (max-width: 900px) {
+            .grid-3 { grid-template-columns: 1fr; gap: 3rem; }
+        }
+
+        .moment-card { display: flex; flex-direction: column; gap: 1.5rem; }
+        .moment-img-wrapper {
+            position: relative; width: 100%; aspect-ratio: 3/4;
+            overflow: hidden; border: 1px solid var(--line);
+        }
+        .moment-img-wrapper img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        .moment-card:hover .moment-img-wrapper img { transform: scale(1.05); }
+
+        .portfolio-header {
+            display: flex; justify-content: space-between; align-items: flex-end;
+            margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem;
+        }
+        .filter-group { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .filter-btn {
+            background: none; border: none; color: var(--muted);
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em;
+            cursor: pointer; transition: color var(--transition-med);
+            padding-bottom: 4px; position: relative;
+        }
+        .filter-btn::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px;
+            background-color: var(--gold); transform: scaleX(0);
+            transition: transform var(--transition-med); transform-origin: left;
+        }
+        .filter-btn.active, .filter-btn:hover { color: var(--gold); }
+        .filter-btn.active::after { transform: scaleX(1); }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        @media (min-width: 1024px) { .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+        @media (max-width: 600px) { .portfolio-grid { grid-template-columns: 1fr; } }
+
+        .portfolio-item {
+            position: relative; overflow: hidden; background-color: var(--brown);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        /* Asymmetric Masonry Simulation */
+        .portfolio-item:nth-child(1) { aspect-ratio: 3/4; }
+        .portfolio-item:nth-child(2) { aspect-ratio: 4/5; }
+        .portfolio-item:nth-child(3) { aspect-ratio: 1/1; }
+        .portfolio-item:nth-child(4) { aspect-ratio: 16/9; grid-column: 1 / -1; }
+        @media (min-width: 1024px) {
+            .portfolio-item:nth-child(1) { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+            .portfolio-item:nth-child(4) { grid-column: span 2; }
+            .portfolio-item:nth-child(5) { aspect-ratio: 3/4; }
+        }
+
+        .portfolio-item img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover; transition: transform var(--transition-slow);
+        }
+        .portfolio-item:hover img { transform: scale(1.04); }
+
+        .portfolio-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(11,9,8,0.9), transparent 60%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 2.5rem; opacity: 0; transition: opacity var(--transition-slow);
+        }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        
+        .portfolio-overlay span {
+            color: var(--gold); font-size: 0.65rem; text-transform: uppercase;
+            letter-spacing: 0.15em; margin-bottom: 0.5rem;
+            transform: translateY(10px); transition: all var(--transition-med) 0.1s;
+        }
+        .portfolio-overlay h4 {
+            color: var(--ivory); font-size: 1.75rem;
+            transform: translateY(10px); transition: all var(--transition-med) 0.2s;
+        }
+        .portfolio-item:hover .portfolio-overlay span,
+        .portfolio-item:hover .portfolio-overlay h4 { transform: translateY(0); }
+        
+        @media (max-width: 768px) {
+            .portfolio-overlay { opacity: 1; background: linear-gradient(to top, rgba(11,9,8,0.8), transparent 70%); padding: 1.5rem;}
+            .portfolio-overlay span, .portfolio-overlay h4 { transform: translateY(0); }
+        }
+
+        .cinematic-break {
+            position: relative;
+            height: 80vh;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; overflow: hidden;
+        }
+        .cinematic-break img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: 1;
+        }
+        .cinematic-break .overlay {
+            position: absolute; inset: 0; background-color: rgba(11,9,8,0.6); z-index: 2;
+        }
+        .cinematic-break .content { position: relative; z-index: 3; padding: 0 24px; }
+        
+        .services-list { border-top: 1px solid var(--line); margin-top: 4rem; }
+        .service-row {
+            display: grid; grid-template-columns: 80px 1fr 2fr 40px;
+            align-items: center; padding: 3rem 0;
+            border-bottom: 1px solid var(--line);
+            transition: all var(--transition-med); position: relative;
+        }
+        .service-row::before {
+            content: ''; position: absolute; bottom: -1px; left: 0;
+            width: 100%; height: 1px; background-color: var(--gold);
+            transform: scaleX(0); transform-origin: left; transition: transform var(--transition-med);
+        }
+        .service-row:hover::before { transform: scaleX(1); }
+        .service-num { color: var(--gold); font-family: var(--font-body); font-size: 0.875rem; letter-spacing: 0.1em; }
+        .service-row h3 { font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--ivory); transition: transform var(--transition-med); margin: 0; }
+        .service-row:hover h3 { transform: translateX(10px); color: var(--gold-light); }
+        .service-row p { margin: 0; }
+        .service-arrow { text-align: right; color: var(--gold); font-size: 1.5rem; opacity: 0; transform: translateX(-15px); transition: all var(--transition-med); }
+        .service-row:hover .service-arrow { opacity: 1; transform: translateX(0); }
+        
+        @media (max-width: 900px) {
+            .service-row { grid-template-columns: 1fr; gap: 1rem; padding: 2.5rem 0; }
+            .service-num { margin-bottom: 0.5rem; }
+            .service-arrow { display: none; }
+            .service-row:hover h3 { transform: none; }
+        }
+
+        .reviews-section { background-color: var(--brown); }
+        .reviews-header { text-align: center; margin-bottom: 5rem; }
+        
+        .review-card {
+            padding: 3rem 2rem; border: 1px solid var(--line);
+            position: relative; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .quote-mark {
+            font-family: var(--font-heading); font-size: 4rem; color: var(--gold);
+            opacity: 0.3; margin-bottom: 1rem; line-height: 1;
+        }
+        .review-text {
+            font-family: var(--font-heading); font-size: 1.35rem; font-style: italic;
+            color: var(--ivory); margin-bottom: 2rem;
+        }
+        .review-author { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; }
+
+        .location-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+        }
+        @media (max-width: 900px) { .location-grid { grid-template-columns: 1fr; gap: 3rem; } }
+        
+        .info-block { margin-bottom: 2.5rem; }
+        .info-block h4 { color: var(--gold); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem; }
+
+        .map-placeholder {
+            width: 100%; height: 450px; background-color: var(--brown);
+            border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
+            flex-direction: column; text-align: center; padding: 2rem; position: relative; overflow: hidden;
+        }
+        .map-placeholder::before {
+            content: ''; position: absolute; inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80');
+            background-size: cover; opacity: 0.05; filter: grayscale(100%);
+        }
+        .map-content { position: relative; z-index: 2; }
+
+        .footer { padding: 5rem 0 2rem; background-color: var(--black); border-top: 1px solid var(--line); }
+        .footer-flex { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4rem; margin-bottom: 4rem; }
+        .footer-logo { font-family: var(--font-heading); font-size: 2rem; color: var(--ivory); letter-spacing: 0.15em; margin-bottom: 0.5rem; display: block; }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 2rem; border-top: 1px solid var(--line);
+            font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; flex-wrap: wrap; gap: 1rem;
+        }
+
+        .floating-wa {
+            position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px;
+            background-color: var(--black); border: 1px solid var(--gold); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; z-index: 999;
+            color: var(--gold); transition: all var(--transition-med);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+        .floating-wa:hover { transform: scale(1.1); background-color: var(--gold); color: var(--black); }
+        .floating-wa svg { width: 24px; height: 24px; fill: currentColor; }
+        @media (max-width: 768px) { .floating-wa { bottom: 16px; right: 16px; width: 50px; height: 50px; } }
+
+        /* Scroll Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.15s; }
+        .delay-2 { transition-delay: 0.3s; }
+    </style>
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-brand">VAIBHAV</div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">VAIBHAV</a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#intro" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="https://wa.me/917066819951?text=Hello%20Vaibhav%20Photo%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20wedding%20photography.%20Please%20share%20the%20details." target="_blank" class="nav-link desktop-cta" style="display: flex; align-items: center; gap: 8px;">
+                    WHATSAPP ↗
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <!-- CRITICAL FIX: Absolute positioning, z-index 1, valid Unsplash URL -->
+        <img src="https://images.unsplash.com/photo-1621801306185-8c0ccf9c8eb8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cinematic Indian Wedding" class="hero-bg">
+        
+        <!-- CRITICAL FIX: Overlay at z-index 2 -->
+        <div class="hero-overlay"></div>
+        
+        <!-- CRITICAL FIX: Content wrapper at z-index 3 -->
+        <div class="container hero-container">
+            <div class="hero-content reveal active">
+                <span class="label-gold">WEDDING PHOTOGRAPHY &middot; WARORA</span>
+                <h1>Where<br>Your Story<br>Becomes<br>Timeless.</h1>
+                <p>Cinematic wedding photography crafted around the moments, emotions, and people that make your celebration yours.</p>
+               <br><br> <br><br>
+                <!-- <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-ivory">View Our Stories &rarr;</a>
+                    <a href="https://wa.me/917066819951?text=Hello%20Vaibhav%20Photo%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20wedding%20photography.%20Please%20share%20the%20details." target="_blank" class="btn btn-gold">WhatsApp Enquiry &rarr;</a>
+                </div> -->
+            </div>
+        </div>
+        
+        <div class="hero-bottom-bar">
+            <div class="container">
+                <div class="hero-bottom-flex reveal delay-2 active">
+                    <div class="meta-text">
+                        <span style="color: var(--ivory);">VAIBHAV PHOTO STUDIO</span>
+                        <span>WARORA &middot; MAHARASHTRA</span>
+                    </div>
+                    <div class="meta-text" style="display: flex; flex-direction: row; gap: 2rem;">
+                        <span>SCROLL TO DISCOVER &darr;</span>
+                        <span style="color: var(--gold);">01 / 05</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="intro">
+        <div class="container">
+            <div class="intro-section reveal">
+                <span class="label-gold">THE EXPERIENCE</span>
+                <h2>Your wedding deserves more<br>than photographs.<br><span style="color: var(--gold);">It deserves a story.</span></h2>
+                <p>From quiet glances to unforgettable celebrations, we preserve the atmosphere, emotion, and beauty of your wedding in photographs you will return to for years.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-0" id="moments">
+        <div class="container">
+            <h2 class="reveal mb-4">The Moments We Preserve</h2>
+            <div class="grid-3">
+                <div class="moment-card reveal delay-1">
+                    <div class="moment-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1722952934708-749c22eb2e58?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Indian Wedding Ceremony">
+                    </div>
+                    <div>
+                        <span class="label-gold">THE CEREMONY</span>
+                        <p>Sacred rituals, traditions, family, and emotion.</p>
+                    </div>
+                </div>
+                
+                <div class="moment-card reveal delay-2">
+                    <div class="moment-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1587271315307-eaebc181c749?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Indian Wedding Celebration">
+                    </div>
+                    <div>
+                        <span class="label-gold">THE CELEBRATION</span>
+                        <p>Dance floors, laughter, music, and unforgettable energy.</p>
+                    </div>
+                </div>
+                
+                <div class="moment-card reveal delay-3">
+                    <div class="moment-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1599462616558-2b75fd26a283?q=80&w=601&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Indian Bridal Details">
+                    </div>
+                    <div>
+                        <span class="label-gold">THE DETAILS</span>
+                        <p>The attire, jewellery, décor, invitations, and little details that complete your story.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cinematic-break">
+        <img src="https://images.unsplash.com/photo-1697347814800-808936c74036?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Emotional Wedding Moment">
+        <div class="overlay"></div>
+        <div class="content reveal">
+            <h2 style="color: var(--ivory); font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 1rem;">Some moments are meant to be<br>remembered forever.</h2>
+            <div style="width: 40px; height: 1px; background-color: var(--gold); margin: 0 auto;"></div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container reveal">
+            <span class="label-gold">WHAT WE PHOTOGRAPH</span>
+            <h2>Our Wedding Stories</h2>
+            
+            <div class="services-list">
+                <div class="service-row">
+                    <div class="service-num">01</div>
+                    <h3 class="font-serif">Wedding Day</h3>
+                    <p>The emotions, rituals, people, and celebrations that define your day.</p>
+                    <div class="service-arrow">&rarr;</div>
+                </div>
+                <div class="service-row">
+                    <div class="service-num">02</div>
+                    <h3 class="font-serif">Bridal Portraits</h3>
+                    <p>Elegant portraits focused on expression, attire, jewellery, and personality.</p>
+                    <div class="service-arrow">&rarr;</div>
+                </div>
+                <div class="service-row">
+                    <div class="service-num">03</div>
+                    <h3 class="font-serif">Couple Portraits</h3>
+                    <p>Cinematic portraits that capture your connection naturally.</p>
+                    <div class="service-arrow">&rarr;</div>
+                </div>
+                <div class="service-row">
+                    <div class="service-num">04</div>
+                    <h3 class="font-serif">Candid Moments</h3>
+                    <p>The unscripted laughter, tears, embraces, and little moments between.</p>
+                    <div class="service-arrow">&rarr;</div>
+                </div>
+                <div class="service-row">
+                    <div class="service-num">05</div>
+                    <h3 class="font-serif">Wedding Details</h3>
+                    <p>Décor, jewellery, invitations, flowers, attire, and every carefully chosen detail.</p>
+                    <div class="service-arrow">&rarr;</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="portfolio" style="background-color: var(--black);">
+        <div class="container">
+            <div class="portfolio-header reveal">
+                <div>
+                    <span class="label-gold">RECENT WORK</span>
+                    <h2 style="margin: 0;">Selected<br>Wedding Stories</h2>
+                </div>
+                
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="weddings">WEDDINGS</button>
+                    <button class="filter-btn" data-filter="bride">BRIDE</button>
+                    <button class="filter-btn" data-filter="groom">GROOM</button>
+                    <button class="filter-btn" data-filter="candid">CANDID</button>
+                </div>
+            </div>
+
+            <div class="portfolio-grid reveal">
+                <div class="portfolio-item" data-category="weddings bride">
+                    <img src="https://images.unsplash.com/photo-1684868268327-7e5590bcfbd6?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Bridal Portrait">
+                    <div class="portfolio-overlay">
+                        <span>BRIDAL PORTRAIT</span>
+                        <h4 class="font-serif">A Vision in Red</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="groom weddings">
+                    <img src="https://images.unsplash.com/photo-1760080903593-939c76598175?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Groom Portrait">
+                    <div class="portfolio-overlay">
+                        <span>GROOM PORTRAIT</span>
+                        <h4 class="font-serif">Royal Elegance</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="candid weddings">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" loading="lazy" alt="Candid Wedding">
+                    <div class="portfolio-overlay">
+                        <span>CANDID MOMENT</span>
+                        <h4 class="font-serif">Joyful Tears</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="weddings couple">
+                    <img src="https://images.unsplash.com/photo-1781077125494-88fdfdce04c2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Couple Portrait">
+                    <div class="portfolio-overlay">
+                        <span>WEDDING STORY</span>
+                        <h4 class="font-serif">The Grand Celebration</h4>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="bride details">
+                    <img src="https://images.unsplash.com/photo-1722952934708-749c22eb2e58?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="Details">
+                    <div class="portfolio-overlay">
+                        <span>DETAILS</span>
+                        <h4 class="font-serif">Heritage Adornments</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="reviews-header reveal">
+                <span class="label-gold" style="justify-content: center; font-size: 1rem;">
+                    <span style="color: var(--ivory); margin-right: 8px;">4.8 ★</span> 33 GOOGLE REVIEWS
+                </span>
+                <h2>Loved by our clients.</h2>
+            </div>
+
+            <div class="grid-3 reveal">
+                <div class="review-card delay-1">
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="review-text">"Best place for capturing your moment's....."</p>
+                    <div class="review-author">&mdash; Mansi Awagan</div>
+                </div>
+                
+                <div class="review-card delay-2">
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="review-text">"The final photos were delivered on time with outstanding quality and editing."</p>
+                    <div class="review-author">&mdash; Manish Dhole</div>
+                </div>
+                
+                <div class="review-card delay-3">
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="review-text">"I had an amazing experience with my photographer."</p>
+                    <div class="review-author">&mdash; KUNAL umare</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container location-grid reveal">
+            <div>
+                <span class="label-gold">FIND US</span>
+                <h2 style="margin-bottom: 2.5rem;">Your story<br>starts here.</h2>
+                
+                <div class="info-block">
+                    <h4>ADDRESS</h4>
+                    <p style="color: var(--ivory); margin-bottom:0;">Nehru Chowk, Navin Vasti<br>Warora, Maharashtra 442907</p>
+                </div>
+                
+                <div class="info-block">
+                    <h4>PHONE</h4>
+                    <p style="color: var(--ivory); margin-bottom:0;">070668 19951</p>
+                </div>
+                
+                <div class="info-block">
+                    <h4>HOURS</h4>
+                    <p style="color: var(--ivory); margin-bottom:0;">Open &middot; Closes 8:30 PM</p>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem;">
+                    <a href="https://wa.me/917066819951?text=Hello%20Vaibhav%20Photo%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20wedding%20photography.%20Please%20share%20the%20details." target="_blank" class="btn btn-gold">WhatsApp Enquiry &rarr;</a>
+                    <a href="tel:07066819951" class="btn btn-ivory">Call 070668 19951 &rarr;</a>
+                </div>
+            </div>
+            
+            <div class="map-placeholder">
+                <div class="map-content">
+                    <h3 class="font-serif" style="color: var(--ivory); margin-bottom: 1rem;">Warora Studio</h3>
+                    <p>Nehru Chowk, Navin Vasti</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Vaibhav+Photo+Studio+Warora,+Nehru+Chowk,+Navin+Vasti,+Warora,+Maharashtra+442907" target="_blank" class="btn btn-gold" style="margin-top: 1.5rem;">Get Directions &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-flex">
+                <div>
+                    <span class="footer-logo">VAIBHAV</span>
+                    <p style="font-size: 0.75rem; letter-spacing: 0.15em; color: var(--gold); margin:0;">PHOTO STUDIO WARORA</p>
+                </div>
+                
+                <div>
+                    <p style="color: var(--ivory); font-size: 0.875rem; margin-bottom: 0.5rem; letter-spacing: 0.05em;">STUDIO</p>
+                    <p style="font-size: 0.875rem; color: var(--muted);">Nehru Chowk, Navin Vasti<br>Warora, Maharashtra 442907<br>070668 19951</p>
+                </div>
+                
+                <div style="display: flex; gap: 3rem;">
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="#home" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);">Home</a>
+                        <a href="#intro" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);">About</a>
+                        <a href="#portfolio" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);">Portfolio</a>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <a href="#services" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);">Services</a>
+                        <a href="#reviews" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);">Reviews</a>
+                        <a href="#contact" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--muted);">Contact</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>&copy; 2026 Vaibhav Photo Studio Warora</div>
+                <a href="#home" style="color: var(--gold); cursor: pointer; display: flex; align-items: center; gap: 8px;">BACK TO TOP &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/917066819951?text=Hello%20Vaibhav%20Photo%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20wedding%20photography.%20Please%20share%20the%20details." target="_blank" class="floating-wa" aria-label="Enquire on WhatsApp" title="Enquire on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.811.82 3.145.82 3.182 0 5.769-2.586 5.769-5.766 0-3.181-2.587-5.762-5.765-5.762zm3.225 8.163c-.159.444-.814.802-1.164.845-.316.039-.773.125-2.285-.5-1.818-1.047-2.981-2.909-3.07-3.029-.089-.119-.734-.975-.734-1.86 0-.885.46-1.32.628-1.503.167-.183.364-.229.484-.229.119 0 .238 0 .341.006.111.006.262-.043.413.321.151.365.516 1.258.564 1.353.048.095.079.206.02.325-.06.119-.091.191-.183.294-.087.103-.187.23-.266.313-.087.087-.171.183-.071.353.099.171.441.728.948 1.183.655.586 1.205.764 1.381.849.175.087.278.071.381-.043.103-.115.444-.516.564-.694.119-.175.238-.147.397-.087.159.06 1.005.472 1.179.559.175.087.294.135.337.214.044.079.044.46-.115.904zm-3.225-10.335c4.274 0 7.75 3.475 7.75 7.75s-3.476 7.75-7.75 7.75c-1.378 0-2.67-.361-3.805-1l-4.195 1.1 1.135-4.066c-.722-1.16-1.135-2.51-1.135-3.784 0-4.275 3.476-7.75 7.75-7.75z"/>
+        </svg>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Preloader fade out
+            const preloader = document.getElementById('preloader');
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                preloader.style.pointerEvents = 'none'; // CRITICAL FIX: Ensure it doesn't block interactions
+            }, 800);
+
+            // 2. Sticky Header
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // 3. Mobile Hamburger Menu
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            const navItems = document.querySelectorAll('.nav-link');
+
+            const toggleMenu = () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+            };
+
+            hamburger.addEventListener('click', toggleMenu);
+            navItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) { toggleMenu(); }
+                });
+            });
+
+            // 4. Portfolio Filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        const categories = item.getAttribute('data-category').split(' ');
+                        
+                        if (filterValue === 'all' || categories.includes(filterValue)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(() => { item.style.display = 'none'; }, 400);
+                        }
+                    });
+                });
+            });
+
+            // 5. Scroll Reveal Animations
+            const revealElements = document.querySelectorAll('.reveal');
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (!prefersReducedMotion) {
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { root: null, threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+                revealElements.forEach(el => {
+                    if(!el.classList.contains('active')){ revealObserver.observe(el); }
+                });
+            } else {
+                revealElements.forEach(el => el.classList.add('active'));
+            }
+        });
+    </script>
+</body>
+</html>
